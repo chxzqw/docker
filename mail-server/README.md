@@ -1,4 +1,4 @@
-# mail-server
+# Mail Server
 A mail server includes:  
 Certbot  
 Postfix  
