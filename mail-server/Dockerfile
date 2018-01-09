@@ -1,10 +1,11 @@
 FROM alpine:latest
+LABEL version="0.1"
+LABEL maintainer="chxzqw@gmail.com"
 
-RUN apk update
-RUN apk --no-cache add postfix
-RUN apk --no-cache add dovecot
-RUN apk --no-cache add nsd
-RUN apk --no-cache add amavisd-new
-RUN apk --no-cache add clamav
-RUN apk --no-cache add spamassassin
-RUN apk --no-cache add certbot
+RUN apk update && apk --no-cache add postfix \
+    dovecot \ 
+    nsd \
+    amavisd-new \
+    clamav \
+    spamassassin \
+    certbot
