@@ -10,4 +10,4 @@ RUN apk update \
     clamav \
     spamassassin \
     certbot \
-    make
+    roundcubemail
