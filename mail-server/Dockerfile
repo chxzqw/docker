@@ -11,3 +11,5 @@ RUN apk update \
     spamassassin \
     certbot \
     roundcubemail
+
+EXPOSE 80 443 143 995 53
