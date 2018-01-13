@@ -10,6 +10,7 @@ RUN apk update \
     clamav \
     spamassassin \
     certbot \
-    roundcubemail
+    roundcubemail \
+    postfixadmin
 
 EXPOSE 80 443 143 995 53
