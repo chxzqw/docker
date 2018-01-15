@@ -1,11 +1,7 @@
 # Mail Server
 A mail server includes:  
-Certbot  
-Postfix  
-Dovecot  
-NSD  
-amavisd-new  
-ClamAV  
-SpamAssassin  
-RoundCube  
-Postfix.Admin  
+MTA and MDA components  
+Anti virus stuff  
+Webmail  
+Contorl panel  
+and more  

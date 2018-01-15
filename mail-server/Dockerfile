@@ -5,7 +5,7 @@ LABEL maintainer="Sid Chen <chxzqw@gmail.com>"
 RUN apk update \
     && apk --no-cache add postfix \
     dovecot \ 
-    nsd \
+    postfixadmin \
     amavisd-new \
     clamav \
     spamassassin \
@@ -13,4 +13,4 @@ RUN apk update \
     roundcubemail \
     postfixadmin
 
-EXPOSE 80 443 143 995 53
+EXPOSE 80 443 143 995
