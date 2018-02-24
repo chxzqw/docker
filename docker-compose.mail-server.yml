@@ -1,0 +1,41 @@
+version: '3.3'
+
+services:
+  postfix:
+    image: postfix:alpine
+    build: 
+      context: ./postfix
+      labels:
+        name.sidchen: "Sid Chen <chxzqw@gmail.com>"
+    ports:
+      - "25:25"
+
+  dovecot:
+    image: dovecot:alpine
+    build:
+      context: ./dovecot
+      labels:
+        name.sidchen: "Sid Chen <chxzqw@gmail.com>"
+    ports:
+      - "143:143"
+      - "993:993"
+
+  postfixadmin:
+    image: postfixadmin:nginx
+    build:
+      context: ./postfixadmin
+      labels:
+        name.sidchen: "Sid Chen <chxzqw@gmail.com>"
+    ports:
+      - "80:80"
+      - "443:443"
+
+  roundcube:
+    image: roundcube:nginx
+    build:
+      context: ./roundcube
+      labels:
+        name.sidchen: "Sid Chen <chxzqw@gmail.com>"
+    ports:
+      - "80:80"
+      - "443:443"
