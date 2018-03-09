@@ -1,9 +1,4 @@
-FROM alpine:latest
+FROM hardware/nsd-dnssec:latest
 
 RUN apk update \
-    && apk --no-cache add nsd \
-    && apk --no-cache add ldns
-
-EXPOSE 53
-
-CMD ["nsd"]
+    && apk --no-cache add cron

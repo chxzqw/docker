@@ -1,4 +1,4 @@
 FROM alpine:latest
 
 RUN apk update \
-    && apk --no-cache add postfix
+    && apk --no-cache add certbot
