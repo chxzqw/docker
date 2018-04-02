@@ -1,8 +1,6 @@
 FROM wordpress:latest
 
-RUN apt-get update -y \
-    && apt-get install -y \
-    libxml2-dev \
-    php-soap \
-    && apt-get clean -y \
+RUN apt update \
+    && apt install libxml2-dev -y \
+    && docker-php-ext-configure soap --enable-soap \
     && docker-php-ext-install soap
