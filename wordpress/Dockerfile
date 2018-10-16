@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM wordpress
 
 RUN apt update \
     && apt install -y libxml2-dev \
